@@ -4,118 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./style.css">
-    <title>Megha Rajesh - Public Relations Specialist</title>
+    <title>Megha Rajesh</title>
 </head>
 <body>
-    <div class="sidebar">
-       <div class="container">
-           <div class="profile">
-               <img src="./images/megha-headshot.jpg" alt="Megha Rajesh Photo" class="profile__img">
-               <p class="profile__text">
-                <span class="bright">Megha Rajesh</span>, is a Public Relations Specialist, Content Optimization and SEO, Freelance Content Writer.
-               </p>
-               
-           </div>
-           <div class="socials">
-               <ul class="socials__link">
-                   <a href="https://twitter.com/megharajesh12" target="_blank"><span class="icon twitter"></span></a>
-                   <a href="https://bit.ly/3BVEMuk" target="_blank"><span class="icon linkedin"></span></a>
-                   <a href="mailto:megharajesh05@gmail.com"><span class="icon mail"></span></a>
-               </ul>
-               <div class="other">&copy;Megha | Built by <a href="https://twitter.com/Vaishnav_sh" class="dev-link">Vaishnav</a></div>
-           </div>
-       </div>
-
+    <div class="wrapper">
+        <header class="header container">
+            <div class="navigation">
+                <a href="#">
+                    <img class="logo" src="./images/logo.svg" alt="logo">
+                </a>
+                <button class="nav-toggle">
+                    <img src="./images/burger-menu.svg" alt="menu button">
+                </button>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">WORK</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="container">
+                <h1 class="title">
+                    MEGHA <br><span>RAJESH</span>
+                </h1>
+                <p class="title-text">
+                    Megha Rajesh is a Public Relations Specialist,  fraudster with a mediocre boyfriend who acts like a retard all the time.
+                </p>
+                <a href="mailto:megharajesh05@gmail.com" class="primary-btn">Get In Touch</a>
+            </div>
+        </main>
+        <footer class="footer container">
+            <ul class="icons">
+                <li class="icon twt"><a href="https://twitter.com/megharajesh12"></a></li>
+                <li class="icon lin"><a href="https://twitter.com/megharajesh12"></a></li>
+                <li class="icon mail"><a href="https://twitter.com/megharajesh12"></a></li>
+            </ul>
+        </footer>
     </div>
 
-
-    <section id="about-section" class="container border-tb" >
-        <p class="section-text">
-            A triple major undergraduate, skilled in communication and creative thinking. As a recent graduate/fresher, I am actively seeking full-time, part-time and intern opportunities.
-        </p>
-
-        <p class="section-text">I've received 3 months of internship experience in content creation and management. I played a key role in increasing web traffic by working on Search Engine Optimised articles. Being a part of this journey has taught me how to work swiftly against a limited time frame and it has also improved my creativity.
-        </p>
-
-        <p class="section-text">On the side, I worked as a freelance proofreader & editor, having worked with clients around the globe. This experience has improved my communication skills and overall work productivity. My other interests lie in copywriting, advertising and PR. I look forward to offering my knowledge and skills for personal and organisational growth!
-        </p>
-
-        <a href="mailto:megharajesh05@gmail.com" class="btn">Get In Touch</a>
-    </section>
-
-
-    <section id="work" class="container">
-        <h2 class="section-title">Recent Work</h2>
-        <a href="#" class="card" target="_blank">
-            <img src="./images/pexels-cottonbro-6069537 (2).jpg" alt="">
-            <p class="card__title">Lorem ipsum dolor sit amet consectetur.</p>
-            <p class="card__text">Another low effor mediocre article about bullshit</p>
-        </a href="#">
-
-        <a href="#" class="card" target="_blank">
-            <img src="./images/pexels-cottonbro-6069537 (2).jpg" alt="article cover image">
-            <p class="card__title">Lorem ipsum dolor sit amet consectetur.</p>
-            <p class="card__text">Another low effor mediocre article about bullshit</p>
-        </a href="#">
-
-        <a href="#" class="card" target="_blank">
-            <img src="./images/pexels-cottonbro-6069537 (2).jpg" alt="article cover image">
-            <p class="card__title">Lorem ipsum dolor sit amet consectetur.</p>
-            <p class="card__text">Another low effor mediocre article about bullshit</p>
-        </a href="#">
-
-        <a href="#" class="card" target="_blank">
-            <img src="./images/pexels-cottonbro-6069537 (2).jpg" alt="article cover image">
-            <p class="card__title">Lorem ipsum dolor sit amet consectetur.</p>
-            <p class="card__text">Another low effor mediocre article about bullshit</p>
-        </a href="#">
-    </section>
-
-    <section id="experience" class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="job">
-            <h4 class="job__title"> Web Content Writer<a href="#" class="job__comp"> @ Standford Arts Review</a></h4>
-            <p class="job__date">Nov 2020 - Jan 2021 - <span class="job__position">Internship</span></p> 
-            <ul class="tasks">
-                <li class="tasks__item">Served as a key content writer in increasing web traffic.</li>
-                <li class="tasks__item">Wrote 80 articles in total on trending content. </li>
-                <li class="tasks__item">Worked on 2 articles a day to improve Google ranking.</li>
-                <li class="tasks__item">Gained experience with WordPress Content Management System.</li>
-            </ul>
-        </div>
-
-        <div class="job">
-            <h4 class="job__title"> Freelance Proofreader<a href="https://upwork.com" class="job__comp"> @ Upwork</a></h4>
-            <p class="job__date">Nov 2020 - Dec 2020 - <span class="job__position">Freelance</span></p> 
-            <ul class="tasks">
-                <li class="tasks__item">Worked with a Singapore client on a 'Health & Personal Development' EBook.</li>
-                <li class="tasks__item">Completed fine-tuning and polishing 15,000 words in 2 days.</li>
-                <li class="tasks__item">Ensured consistent formatting, clarity and concision.</li>
-                <li class="tasks__item">Responsible for correcting syntax errors for EBook publication.</li>
-            </ul>
-        </div>
-    </section>
-
-<!-- 
-    <section id="contact">
-
-    </section> 
--->
-
-    <footer id="footer">
-        <div class="socials-footer">
-            <div class="socials__link">
-                <a href="https://twitter.com/megharajesh12" target="_blank"><span class="icon twitter"></span></a>
-                <a href="https://bit.ly/3BVEMuk" target="_blank"><span class="icon linkedin"></span></a>
-                <a href="mailto:megharajesh05@gmail.com" target="_blank"><span class="icon mail"></span></a>
-            </div>
-            <div class="other">&copy; Megha Rajesh | Built by <a href="https://twitter.com/Vaishnav_sh" class="dev-link bright" target="_blank">Vaishnav</a></div>
-        </div>
-    </footer>
-
-
-    
+    <script src="./main.js"></script>
 </body>
 </html>

@@ -1,237 +1,198 @@
-html {
-    scroll-behavior: smooth;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 :root {
-    --grey: #494949;
-    --very-light-grey: #8d8d8d;
-    --spring-green: #04d384;
+    --black: #000000;
+    --light-black: #1F1F1F;
+    --white: #ffffff;
+    --off-white: #F3F0F0;
+
+    --open-transition: all 400ms ease;
+    --ease-transition: all 250ms ease;
 }
 
 body {
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.7;
-    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--black);
 }
-
-
-.socials {
-    display: none;
-}
-
-/* GENERAL */
 
 img {
     max-width: 100%;
 }
 
-section {
-    padding: 1em 0;
-    /* border: 2px solid; */
+a{
+    text-decoration: none;
+}
+
+.wrapper {
+    min-height: 100vh;
 }
 
 .container {
     width: 90%;
+    max-width: 1320px;
     margin: 0 auto;
+    /* border: 2px solid; */
 }
 
-.btn {
-    display: block;
-    text-align: center;
-    color: var(--very-light-grey);
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-decoration: none;
-    border: 2px solid var(--very-light-grey);
-    border-radius: 5px;
-    padding: 0.45em 1.25em;
-    margin: 1.75em 0;
-    transition: all 250ms ease-in-out;
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.btn:focus,
-.btn:hover {
-    color: var(--spring-green);
-    border: 2px solid var(--spring-green);
+/* home page */
+/* NAVIGATION */
+
+.header {
+    padding: 1.25em 0;
 }
 
-
-/* TYPOGRAPHY */
-.section-title {
-    color: #3b3b3b;
-    font-size: 1.75rem;
-    font-weight: 400;
-    margin: 0 0 0.5em 0;
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.section-text {
-    color: var(--grey);
+.logo {
+    width: 24px;
 }
 
-.bright {
-    font-weight: 600;
-    color: #ffffff;
+.nav-toggle {
+    background: transparent;
+    border: none;
 }
 
-.profile__text {
-    font-size: 1.125rem;
-    color: #d8d8d8;
-}
-
-.card__title {
-    color: var(--grey);
-    font-size: 1.125rem;
-    margin: 0;
-}
-
-.card__text {
-    color: var(--very-light-grey);
-    font-size: 0.85rem;
-    margin-top: 0.5em;
-}
-
-
-/* LAYOUT */
-
-/* SIDEBAR */
-
-.sidebar {
-    text-align: center;
-    min-height: 70vh;
-    background: url('./images/bg-main.jpg');
-    background-size: cover;
-    color: white;
-    display: grid; 
-    place-items: center;
-}
-
-.profile__img {
-    max-width: 100px;
-    border-radius: 50%;
-}
-
-/* WORK */
-
-.card {
-    display: block;
-    text-decoration: none;
-    border: 1.5px solid rgb(170, 170, 174);
-    border-radius: 5px;
-    padding: 1em;
-    margin-bottom: 1.5em;
-
-}
-
-.card + .card {
-    margin-top: 1.5em;
-}
-
-.card:focus,
-.card:hover {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-
-/* EXPERIENCE */
-
-
-.job {
-    font-size: 1rem;
-    border: 1.5px solid var(--very-light-grey);
-    padding: 0.5em 1.25em;
-    margin-bottom: 2em;
-}
-
-.job__title {
-    margin-bottom: 0;
-}
-
-.job__date {
-    color: var(--grey);
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin: 0;
-}
-
-.tasks {
+.nav-list {
+    /* border: 2px solid; */
+    padding: 0;
+    margin: 2em 0;
     list-style: none;
 }
 
-.job__comp {
-    color: var(--spring-green);
-    text-decoration: none;
+.nav {
+    /* position: absolute;
+    width: 100%; */
+    background: var(--white);
+    height: 0;
+    overflow: hidden;
+    transition: var(--open-transition);
 }
 
-.tasks {
-    padding-left: 1em;
+.show-nav {
+    height: 14rem;
 }
 
-.tasks__item {
-    position: relative;
-    padding-left: 1em;
-    margin-bottom: 0.5em;
+.nav-item + .nav-item{
+    margin-top: 2.25em;
 }
 
-.tasks__item::before {
-    content: '\2023';
-    position: absolute;
-    top: -2px;
-    left: 0;
-    font-size: 1.125rem;
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--black)
 }
 
-/* FOOTER */
-
-#footer {
-    padding: 3.25em 0;
-    font-size: 1rem;
-    background: url('./images/bg-main.jpg');
-    background-size: cover;
-    text-align: center;
+.nav-link:focus,
+.nav-link:hover {
+    text-shadow: 2px 2px rgb(199, 199, 199);
 }
 
-.socials-footer {
-    color: #d8d8d8;
+/* MAIN SECTION */
+
+.main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.socials__link {
+.title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    animation: fade-up 200ms ease-in forwards;
+}
+
+.title span {
+    padding: 0;
+    color: var(--light-black);
+}
+
+.title-text {
+    margin: 1em 0;
+    color: var(--light-black);
+    font-weight: 500;
+    font-size: 0.935rem;
+    opacity: 0;
+    animation: fade-up 200ms ease-in 400ms forwards;
+}
+
+.primary-btn {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: black;
+    border: 2px solid var(--black);
+    padding: 0.75em 1.25em;
+    transition: var(--ease-transition);
+    opacity: 0;
+    animation: fade-up 200ms ease-in 800ms forwards;
+}
+
+.primary-btn:focus,
+.primary-btn:hover {
+    color: var(--white);
+    background: var(--black);
+}
+
+.icons {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
     display: flex;
     justify-content: center;
-    margin-bottom: 1em;
 }
 
 .icon {
-    display: block;
+    margin: 1em;
     width: 30px;
     height: 30px;
-    margin: 0 0.75em;
-    transition: transform 150ms ease-in;
+    transition: var(--ease-transition);
 }
 
+.icon:focus,
 .icon:hover {
     transform: scale(0.9);
 }
 
-.twitter {
-    background: url('./images/twitter-brands.svg') no-repeat;
+.twt{
+    background: url('./images/twitter-brand.svg') no-repeat;
+    background-size: cover;
+}
+.lin{
+    background: url('./images/linkedin-brand.svg') no-repeat;
+    background-size: cover;
+}
+.mail{
+    background: url('./images/envelope.svg') no-repeat;
+    background-size: cover;
 }
 
-.linkedin {
-    background: url('./images/linkedin-brands.svg') no-repeat;
-}
 
-.mail {
-    background: url('./images/envelope-solid.svg') no-repeat;
-}
+@keyframes fade-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
 
-.dev-link {
-    color: #d8d8d8;
-    font-weight: 400;
-    text-decoration: none;
-}
-
-.dev-link:focus,
-.dev-link:hover {
-    color: #fff;
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
