@@ -26,14 +26,13 @@ img {
 a{
     text-decoration: none;
 }
-
+/* 
 .wrapper {
     min-height: 100vh;
-}
+} */
 
 .container {
-    width: 90%;
-    max-width: 1320px;
+    width: min(1320px, 90%);
     margin: 0 auto;
     /* border: 2px solid; */
 }
@@ -48,7 +47,8 @@ a{
 /* NAVIGATION */
 
 .header {
-    padding: 1.25em 0;
+    min-height: 10vh;
+    /* padding: 1.5em 0; */
 }
 
 .navigation {
@@ -58,7 +58,7 @@ a{
 }
 
 .logo {
-    width: 24px;
+    width: 18px;
 }
 
 .nav-toggle {
@@ -74,8 +74,6 @@ a{
 }
 
 .nav {
-    /* position: absolute;
-    width: 100%; */
     background: var(--white);
     height: 0;
     overflow: hidden;
@@ -112,11 +110,12 @@ a{
 
 .title {
     margin: 0;
+    line-height: 0.9;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: max(4rem, 9rem);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 0;
-    animation: fade-up 200ms ease-in forwards;
+    animation: fade-up 250ms ease-in 1s forwards;
 }
 
 .title span {
@@ -125,12 +124,13 @@ a{
 }
 
 .title-text {
-    margin: 1em 0;
+    width: min(600px, 80%);
+    margin: 1.5em 0;
     color: var(--light-black);
     font-weight: 500;
-    font-size: 0.935rem;
+    font-size: max(0.935rem, 1.25rem);
     opacity: 0;
-    animation: fade-up 200ms ease-in 400ms forwards;
+    animation: fade-up 250ms ease-in 1.5s forwards;
 }
 
 .primary-btn {
@@ -141,7 +141,7 @@ a{
     padding: 0.75em 1.25em;
     transition: var(--ease-transition);
     opacity: 0;
-    animation: fade-up 200ms ease-in 800ms forwards;
+    animation: fade-up 250ms ease-in 2s forwards;
 }
 
 .primary-btn:focus,
@@ -150,10 +150,16 @@ a{
     background: var(--black);
 }
 
+.footer {
+    min-height: 10vh;
+}
+
 .icons {
     padding: 0;
     margin: 0;
     list-style: none;
+    opacity: 0;
+    animation: fade-up 250ms ease-in 2.5s forwards;
 
     display: flex;
     justify-content: center;
@@ -161,27 +167,14 @@ a{
 
 .icon {
     margin: 1em;
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     transition: var(--ease-transition);
 }
 
 .icon:focus,
 .icon:hover {
     transform: scale(0.9);
-}
-
-.twt{
-    background: url('./images/twitter-brand.svg') no-repeat;
-    background-size: cover;
-}
-.lin{
-    background: url('./images/linkedin-brand.svg') no-repeat;
-    background-size: cover;
-}
-.mail{
-    background: url('./images/envelope.svg') no-repeat;
-    background-size: cover;
 }
 
 
@@ -194,5 +187,31 @@ a{
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        height: auto;
+    }
+
+    .nav-list {
+        margin: 0;
+
+        display: flex;
+    }
+
+    .nav-item + .nav-item{
+        margin: 0 0 0 2em;
     }
 }
