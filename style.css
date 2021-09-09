@@ -48,8 +48,8 @@ a{
 /* NAVIGATION */
 
 .header {
-    min-height: 10vh;
-    /* padding: 1.5em 0; */
+    /* min-height: 10vh; */
+    padding: 1.5em 0;
 }
 
 .navigation {
@@ -82,7 +82,7 @@ a{
 }
 
 .show-nav {
-    height: 14rem;
+    height: 15rem;
 }
 
 .nav-item + .nav-item{
@@ -114,7 +114,7 @@ a{
     line-height: 0.8;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(3rem, 15vw, 12rem);
+    font-size: clamp(3.5rem, 15vw, 12rem);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 0;
     padding-left: 0;
@@ -130,7 +130,7 @@ a{
     margin: 1.75em 0;
     color: var(--light-black);
     font-weight: 500;
-    font-size: clamp(0.75rem, 2vw, 1.125rem);
+    font-size: clamp(1rem, 2vw, 1.125rem);
     opacity: 0;
     animation: fade-up 250ms ease-in 1.5s forwards;
 }
