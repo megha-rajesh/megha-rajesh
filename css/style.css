@@ -27,10 +27,6 @@ img {
 a{
     text-decoration: none;
 }
-/* 
-.wrapper {
-    min-height: 100vh;
-} */
 
 .container {
     width: min(1100px, 90%);
