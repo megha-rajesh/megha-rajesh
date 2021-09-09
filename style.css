@@ -15,7 +15,8 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: var(--white);
+    background: #fffee9;
+    /* background: var(--white); */
     color: var(--black);
 }
 
@@ -32,7 +33,7 @@ a{
 } */
 
 .container {
-    width: min(1320px, 90%);
+    width: min(1100px, 90%);
     margin: 0 auto;
     /* border: 2px solid; */
 }
@@ -74,7 +75,7 @@ a{
 }
 
 .nav {
-    background: var(--white);
+    background: #fffee9;
     height: 0;
     overflow: hidden;
     transition: var(--open-transition);
@@ -85,18 +86,18 @@ a{
 }
 
 .nav-item + .nav-item{
-    margin-top: 2.25em;
+    margin-top: 2.5em;
 }
 
 .nav-link {
-    font-size: 0.875rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 500;
     color: var(--black)
 }
 
 .nav-link:focus,
 .nav-link:hover {
-    text-shadow: 2px 2px rgb(199, 199, 199);
+    text-shadow: 1.5px 1.5px rgb(180, 180, 180);
 }
 
 /* MAIN SECTION */
@@ -110,25 +111,26 @@ a{
 
 .title {
     margin: 0;
-    line-height: 0.9;
+    line-height: 0.8;
     font-weight: 700;
-    font-size: max(4rem, 9rem);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3rem, 15vw, 12rem);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 0;
+    padding-left: 0;
     animation: fade-up 250ms ease-in 1s forwards;
 }
 
 .title span {
-    padding: 0;
     color: var(--light-black);
 }
 
 .title-text {
-    width: min(600px, 80%);
-    margin: 1.5em 0;
+    width: min(500px, 90%);
+    margin: 1.75em 0;
     color: var(--light-black);
     font-weight: 500;
-    font-size: max(0.935rem, 1.25rem);
+    font-size: clamp(0.75rem, 2vw, 1.125rem);
     opacity: 0;
     animation: fade-up 250ms ease-in 1.5s forwards;
 }
@@ -148,6 +150,10 @@ a{
 .primary-btn:hover {
     color: var(--white);
     background: var(--black);
+}
+
+.box {
+    border: 2px solid grey;
 }
 
 .footer {
@@ -178,17 +184,6 @@ a{
 }
 
 
-@keyframes fade-up {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 
 @media (min-width: 800px) {
@@ -197,6 +192,11 @@ a{
         justify-content: space-between;
         align-items: center;
     }
+
+    .title {
+        margin: 0 0 0 -15px;
+    }
+
     .nav-toggle {
         display: none;
     }
@@ -212,6 +212,19 @@ a{
     }
 
     .nav-item + .nav-item{
-        margin: 0 0 0 2em;
+        margin: 0 0 0 3.5em;
+    }
+}
+
+
+@keyframes fade-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
