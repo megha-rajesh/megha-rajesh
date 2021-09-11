@@ -291,17 +291,22 @@ a{
 /**
     WORK PAGE
 **/
+.work {
+    padding: 2em 0;
+}
 
 .articles {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
 }
 
 .article {
+    width: 80%;
     max-width: 350px;
     border: 2px solid var(--light-black);
-    padding: 0.875em;
+    padding: 1em;
     background: var(--off-white);
     margin-top: 2em;
 }
@@ -323,10 +328,16 @@ a{
 
 @media (min-width: 800px) {
     .articles {
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1.5em;
     }
 
+    .article {
+        margin-top: 1em;
+    }
 }
+
 
 @keyframes fade-up {
     0% {
