@@ -352,11 +352,18 @@ a{
 
 .contact-info {
     margin: 2em 0 3em 0;
+    opacity: 0;
+    animation: fade-up 250ms ease-in 1s forwards;
 }
 
 .contact-info h3 {
     font-size: 1.35rem;
     margin: 0;
+}
+
+.form-container {
+    opacity: 0;
+    animation: fade-up 250ms ease-in 1.5s forwards;
 }
 
 .form {
@@ -398,13 +405,17 @@ a{
     .contact .row {
         flex-direction: row-reverse;
     }
+
     .form-container {
         width: 40%;
+        opacity: 0;
+        animation: fade-up 250ms ease-in 1s forwards;        
     }
 
     .contact-info {
         width: 55%;
         align-self: center;
+        animation: fade-up 250ms ease-in 1.5s forwards;        
     } 
 
     .contact-info .section-text {
