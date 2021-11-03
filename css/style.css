@@ -139,6 +139,9 @@ a{
     border: 2px solid var(--black);
     padding: 0.75em 1.25em;
     transition: var(--ease-transition);
+}
+
+.primary-btn-animation {
     opacity: 0;
     animation: fade-up 250ms ease-in 2s forwards;
 }
@@ -340,6 +343,74 @@ a{
     }
 }
 
+/**
+    CONTACT PAGE
+**/
+.contact {
+    padding: 2em 0;
+}
+
+.contact-info {
+    margin: 2em 0 3em 0;
+}
+
+.contact-info h3 {
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.form {
+    border: 2px solid var(--black);
+    margin-top: 1em;
+    padding: 2em 1.25em; 
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    border: 1px solid var(--black);
+    padding: 0.75em 0.5em;
+}
+
+.form-input + .form-input {
+    margin-top: 1em;
+}
+
+.submit-btn {
+    font-size: 0.875rem;
+    width: min(125px, 30%);
+    color: black;
+    background: transparent;
+    border: 1px solid var(--black);
+    padding: 0.75em 1.25em;
+    margin: 0.75em 0.25em 0 0;
+    transition: var(--ease-transition);
+}
+
+.submit-btn:hover {
+    color: var(--white);
+    background: var(--black);
+}
+
+@media (min-width: 800px) {
+    .contact .row {
+        flex-direction: row-reverse;
+    }
+    .form-container {
+        width: 40%;
+    }
+
+    .contact-info {
+        width: 55%;
+        align-self: center;
+    } 
+
+    .contact-info .section-text {
+        margin-bottom: 1.25em;
+    }
+}
 
 @keyframes fade-up {
     0% {
